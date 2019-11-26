@@ -2,7 +2,7 @@ h1, p {
   font-family: Lato;
 }
 
-header{
+header,footer{
   background-color: black;
   color: white;
   padding: 5px;
@@ -11,3 +11,4 @@ header{
 .user-name{
   text-transform: uppercase;
 }
+
