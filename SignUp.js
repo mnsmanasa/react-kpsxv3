@@ -6,14 +6,9 @@ export default class SignUp extends Component {
     this.state = {
       loggedIn: false,
       username: '',
-      password: ''
+      password: '',
+      firstTimeLoad: true
     }
-  }
-
-  componentDidMount() {
-    this.setState(
-      {firstTimeLoad: true}
-    )
   }
 
   handleInputChange = (event) => {
@@ -22,8 +17,10 @@ export default class SignUp extends Component {
   }
 
   validateForm = () => {
-    if(this.state.username.length === 0 && this.state.password.length === 0){
+    if(this.state.username.length === 0 || this.state.password.length === 0){
       this.setState({usernameError: true,passwordError: true})
+    } else {
+
     }
   }
   render(){
