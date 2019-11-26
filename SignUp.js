@@ -11,7 +11,9 @@ export default class SignUp extends Component {
   }
 
   handleInputChange = (event) => {
-    this.setState({username: event.target.value})
+    console.log(event.target.name);
+    let key = event.target.name
+    key === 'username'? this.setState({username: event.target.value}):this.setState({password: event.target.value})
   }
   render(){
     return (
@@ -25,7 +27,7 @@ export default class SignUp extends Component {
           </div>
           <div className="signup-field">
             <label>Password</label>
-            <input type="password" required name="username" value={this.state.password}/>
+            <input type="password" required name="password" value={this.state.password} onChange={this.handleInputChange}/>
             <div className="text-danger">Password is required</div>
           </div>
           <div className="signup-field d-flex justify-content-center">
