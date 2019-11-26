@@ -12,3 +12,24 @@ header,footer{
   text-transform: uppercase;
 }
 
+.signup-form{
+  margin: 20px
+}
+.signup-container{
+  background-color:rgb(175, 212, 245);
+  padding: 20px;
+}
+
+label{
+  display: block;
+  margin-bottom:0;
+}
+input{
+  border-radius: 5px;
+  box-shadow: none;
+  border: 1px solid rgb(230, 140, 140);
+}
+.signup-field{
+  margin-bottom: 10px
+}
+
