@@ -4,7 +4,7 @@ export default class Header extends Component {
   constructor(){
     super();
     this.state = {
-
+      loggedIn: false
     }
   }
 
@@ -12,9 +12,9 @@ export default class Header extends Component {
     return (
       <header className="container d-flex justify-content-between bg-grey">
         <div>Logo</div>
-        <div className="user-name">
+        {this.state.loggedIn && <div className="user-name">
         Manasa
-        </div>
+        </div>}
       </header>
     )
   }
