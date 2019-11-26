@@ -10,9 +10,11 @@ export default class Header extends Component {
 
   render(){
     return (
-      <header className="d-flex justify-space-between">
+      <header className="container d-flex justify-content-between bg-grey">
         <div>Logo</div>
-        <div>Nav</div>
+        <div className="user-name">
+        Manasa
+        </div>
       </header>
     )
   }

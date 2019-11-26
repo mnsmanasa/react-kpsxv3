@@ -1,3 +1,13 @@
 h1, p {
   font-family: Lato;
 }
+
+header{
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+
+.user-name{
+  text-transform: uppercase;
+}
