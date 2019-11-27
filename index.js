@@ -6,24 +6,29 @@ import Header from './Header';
 import AppRouter from './App-router';
 import SignUp from './SignUp';
 import './style.css';
+import App from './components/App'
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoggedIn: true
-    };
-    console.log(this.props.history)
-  }
+import { createStore } from 'redux'
+import todoApp from './reducers'
+const store = createStore(todoApp)
 
-  render() {
-    return (
-      <div className="">
-        <Header />
-        { this.state.isLoggedIn ? <AppRouter /> :  <SignUp />}
-      </div>
-    );
-  }
-}
+// class App extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       isLoggedIn: true
+//     };
+//     console.log(this.props.history)
+//   }
+
+//   render() {
+//     return (
+//       <div className="">
+//         <Header />
+//         { this.state.isLoggedIn ? <AppRouter /> :  <SignUp />}
+//       </div>
+//     );
+//   }
+// }
 
 render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
