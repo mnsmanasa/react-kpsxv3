@@ -9,6 +9,7 @@ export default class SignUp extends Component {
       password: '',
       firstTimeLoad: true
     }
+    console.log(this.props.history,'am')
   }
 
   handleInputChange = (event) => {
@@ -20,7 +21,8 @@ export default class SignUp extends Component {
     if(this.state.username.length === 0 || this.state.password.length === 0){
       this.setState({usernameError: true,passwordError: true})
     } else {
-
+      // console.log(this.props.history)
+      // this.props.histrory.push('/')
     }
   }
   render(){
